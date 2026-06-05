@@ -18,7 +18,7 @@ limitations under the License.
 
 #include <stdbool.h>
 
-#include <cstdint>
+#include <stdint.h>
 
 #include "mediapipe/tasks/c/core/base_options.h"
 #include "mediapipe/tasks/c/core/common.h"

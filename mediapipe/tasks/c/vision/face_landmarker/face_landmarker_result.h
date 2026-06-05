@@ -16,7 +16,7 @@ limitations under the License.
 #ifndef MEDIAPIPE_TASKS_C_VISION_FACE_LANDMARKER_RESULT_FACE_LANDMARKER_RESULT_H_
 #define MEDIAPIPE_TASKS_C_VISION_FACE_LANDMARKER_RESULT_FACE_LANDMARKER_RESULT_H_
 
-#include <cstdint>
+#include <stdint.h>
 
 #include "mediapipe/tasks/c/components/containers/category.h"
 #include "mediapipe/tasks/c/components/containers/landmark.h"
