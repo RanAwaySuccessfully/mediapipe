@@ -1,0 +1,5 @@
+A copy of libeigen is included here due to GitLab not allowing it to be downloaded via `wget`.
+
+Its license is included in the LICENSE file in this folder.
+
+Authors: https://libeigen.gitlab.io/#credits

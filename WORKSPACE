@@ -126,7 +126,7 @@ http_archive(
     ],
     sha256 = "b3a24de97a8fdbc835b9833169501030b8977031bcb54b3b3ac13740f846ab30",
     strip_prefix = "zlib-1.2.13",
-    url = "http://zlib.net/fossils/zlib-1.2.13.tar.gz",
+    url = "https://github.com/madler/zlib/releases/download/v1.2.13/zlib-1.2.13.tar.gz",
 )
 
 # gflags needed by glog
@@ -375,6 +375,7 @@ python_init_repositories(
         "3.10": "//:requirements_lock_3_10.txt",
         "3.11": "//:requirements_lock_3_11.txt",
         "3.12": "//:requirements_lock_3_12.txt",
+        "3.13": "//:requirements_lock_3_13.txt",
     },
 )
 
@@ -616,7 +617,7 @@ http_archive(
 new_local_repository(
     name = "linux_opencv",
     build_file = "@//third_party:opencv_linux.BUILD",
-    path = "/usr",
+    path = "opencv_local/build/install/",
 )
 
 new_local_repository(
