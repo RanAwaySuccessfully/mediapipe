@@ -8,7 +8,7 @@ jobs:
   mediapipe:
     name: Build MediaPipe
     runs-on: ubuntu-latest
-    container: debian:bookworm
+    container: debian:bullseye
     defaults:
       run:
         shell: bash
@@ -19,17 +19,8 @@ jobs:
         apt-get update
         apt install -y git cmake clang-16 libegl-dev libgles-dev python3 patchelf
         apt install -y apt-transport-https curl gnupg
-#software-properties-common
-    
-#    - name: Install GCC 13
-#      run: |
-#        add-apt-repository ppa:ubuntu-toolchain-r/test
-#        apt update
-#        apt install -y gcc-13 g++-13 binutils
-#        update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 13
-#        update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 13
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
       with:
         submodules: recursive
 
@@ -59,7 +50,7 @@ jobs:
       run: patchelf --set-rpath ./lib dist/libopencv*
 
     - name: Export complete build
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: mediapipe
         path: dist
